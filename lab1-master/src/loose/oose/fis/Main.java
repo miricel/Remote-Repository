@@ -6,6 +6,7 @@ import loose.oose.fis.documents.XML;
 import loose.oose.fis.processors.Procesor;
 import loose.oose.fis.processors.ProcesorCautare;
 import loose.oose.fis.processors.ProcesorCompus;
+import loose.oose.fis.processors.Process;
 
 import java.util.ArrayList;
 
@@ -29,6 +30,7 @@ public class Main {
         Procesor c1 = new ProcesorCautare("text1");
         Procesor c2 = new ProcesorCautare("text3");
         Procesor c3 = new ProcesorCautare("text2");
+        Procesor c4 = new Process("Hello");
 
         ProcesorCompus pc1 = new ProcesorCompus();
         pc1.adaugaProcesor(c1);
@@ -37,6 +39,7 @@ public class Main {
         ProcesorCompus pc2 = new ProcesorCompus();
         pc2.adaugaProcesor(pc1);
         pc2.adaugaProcesor(c3);
+        pc2.adaugaProcesor(c4);
 
         System.out.println(pc2.proceseaza(documente));
     }
